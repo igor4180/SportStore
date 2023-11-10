@@ -1,0 +1,9 @@
+﻿@model ProductListViewModel
+@foreach (var p in Model?.Products ?? Enumerable.Empty<Product>()){
+	<div>
+		<h3>@p.Name</h3>
+		<span>@p.Description</span>
+		<h4>@p.Price.ToString("c")</h4>
+	</div>
+}
+<div page-model="@Model?.PagingInfo" page-action="Index"> </div>
